@@ -1,9 +1,6 @@
--- Accept the key passed as an argument
-local key = arg[1]  -- or you can use a different variable name
-
--- Validate the key
+-- Validate the global 'key' variable
 local expectedKey = "aZwhUYZHywZBZYs"
-if key ~= expectedKey then
+if _G.key ~= expectedKey then
     error("Incorrect key. Terminating script.")
 end
 
