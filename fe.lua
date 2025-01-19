@@ -1,13 +1,11 @@
--- Define the expected key value
-local expectedKey = "aZwhUYZHywZBZYs"
+-- Accept the key passed as an argument
+local key = arg[1]  -- or you can use a different variable name
 
--- Check if the variable 'key' is defined and matches the expected value
-if not key or key ~= expectedKey then
-    -- If the key is not defined or incorrect, terminate the script with an error message
-    error("Incorrect or missing key. Terminating script.")
+-- Validate the key
+local expectedKey = "aZwhUYZHywZBZYs"
+if key ~= expectedKey then
+    error("Incorrect key. Terminating script.")
 end
 
--- If the key is correct, proceed with the rest of the script
-print("Key validated. Running script...")
-
--- Your script's main functionality goes here
+-- Rest of the script continues here if key is correct
+print("Key validated. Running the rest of the script...")
